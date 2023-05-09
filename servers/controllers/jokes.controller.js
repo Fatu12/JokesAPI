@@ -45,6 +45,7 @@ module.exports = {
         
     },
     updateJoke : (req, res) =>{
+        console.log(req)
         // first we go and grab the information we want want to update, then we give the value we want to update
 
         Joke.findOneAndUpdate(req.params.id, req.body, {new: true, runValidators : true})
